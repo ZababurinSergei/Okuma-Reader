@@ -20,8 +20,10 @@ export function infoToPageURL(library, title, volume = null, page = null) {
   // If just the library and title are given
   if (library && title && !volume && !page) {
     if (library == CONSTANTS.booksURL()) {
+      console.log('------------------- 1 ----------------------', CONSTANTS.homeURL() + 'title.html' + '?title=' + title )
       return CONSTANTS.homeURL() + 'title.html' + '?title=' + title;
     } else {
+      console.log('-------------------- 2 ---------------------', CONSTANTS.homeURL() + 'title.html' + '?library=' + library + '&title=' + title )
       return CONSTANTS.homeURL() + 'title.html' + '?library=' + library + '&title=' + title;
     }
   } else {
